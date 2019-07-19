@@ -1,0 +1,82 @@
+<html>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Weather App
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content >
+  <div class="table1">
+  <ion-searchbar color="blue" [(ngModel)]="city" (click)="submit(city)"></ion-searchbar> 
+  <div class="container">
+  <h1>{{list?.city.name}}</h1>
+  <ion-label>{{list?.list[0].weather[0].main}}</ion-label>
+  <h1>{{list?.list[0].main.temp|number:'1.0-0'}}&#8451;</h1>
+  <div class="img1">
+  <ion-label><img src="http://openweathermap.org/img/w/{{list?.list[0].weather[0].icon}}.png" class="image" style="width: 100px"></ion-label></div>
+  <ion-label style="float:right" >{{list?.list[0].main.temp_max}}&#8451;/{{list?.list[0].main.temp_min}} &#8451;</ion-label>
+  <ion-label style="float: left">{{list?.list[0].dt_txt|date:"EEEE"}} Today</ion-label><br>
+</div>
+<div class="hr"> </div>
+<table>
+  <tr >
+    <td>{{list?.list[0].dt_txt|date:'HH:mm '}}</td> 
+    <td>{{list?.list[1].dt_txt|date:'HH:mm '}}</td>
+    <td>{{list?.list[2].dt_txt|date:'HH:mm '}}</td>
+    <td>{{list?.list[3].dt_txt|date:'HH:mm '}}</td>
+    <td>{{list?.list[4].dt_txt|date:'HH:mm '}}</td>
+    <td>{{list?.list[5].dt_txt|date:'HH:mm '}}</td>
+  </tr>
+  <tr> 
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[0].weather[0].icon}}.png" class="image"></td>
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[1].weather[0].icon}}.png" class="image"></td>
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[2].weather[0].icon}}.png" class="image"></td>
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[3].weather[0].icon}}.png" class="image"></td>
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[4].weather[0].icon}}.png" class="image"></td>
+      <td><img src="http://openweathermap.org/img/w/{{list?.list[5].weather[0].icon}}.png" class="image"></td>
+      </tr>
+      <tr> 
+            <td>{{list?.list[0].main.temp|number:'1.0-0'}}&#8451;</td>
+            <td>{{list?.list[1].main.temp|number:'1.0-0'}}&#8451;</td>
+            <td>{{list?.list[2].main.temp|number:'1.0-0'}}&#8451;</td>
+            <td>{{list?.list[3].main.temp|number:'1.0-0'}}&#8451;</td>
+            <td>{{list?.list[4].main.temp|number:'1.0-0'}}&#8451;</td>
+            <td>{{list?.list[5].main.temp|number:'1.0-0'}}&#8451;</td>
+            </tr>
+</table>
+<div class="hr"> </div>
+<table>
+    <tr> 
+      <td>{{list?.list[7].dt_txt|date:'EEE, MMMM d'}}</td>
+        <td><img src="http://openweathermap.org/img/w/{{list?.list[7].weather[0].icon}}.png" class="image"></td>
+        <td>{{list?.list[7].main.temp_max|number:'1.0-0'}} &#8451; / {{list?.list[7].main.temp_min|number:'1.0-0'}} &#8451;</td>
+    </tr>
+    <tr style="text-align: center"> 
+        <td>{{list?.list[15].dt_txt|date:'EEE, MMMM d'}}</td>
+          <td><img src="http://openweathermap.org/img/w/{{list?.list[15].weather[0].icon}}.png" class="image"></td>
+          <td>{{list?.list[15].main.temp_max|number:'1.0-0'}} &#8451; / {{list?.list[15].main.temp_min|number:'1.0-0'}} &#8451;</td>
+      </tr>
+      <tr style="text-align: center"> 
+          <td>{{list?.list[23].dt_txt|date:'EEE, MMMM d'}}</td>
+            <td><img src="http://openweathermap.org/img/w/{{list?.list[23].weather[0].icon}}.png" class="image"></td>
+            <td>{{list?.list[23].main.temp_max|number:'1.0-0'}} &#8451; / {{list?.list[23].main.temp_min|number:'1.0-0'}} &#8451;</td>
+        </tr>
+        <tr style="text-align: center"> 
+            <td>{{list?.list[31].dt_txt|date:'EEE, MMMM d'}}</td>
+              <td><img src="http://openweathermap.org/img/w/{{list?.list[31].weather[0].icon}}.png" class="image"></td>
+              <td>{{list?.list[31].main.temp_max|number:'1.0-0'}} &#8451; / {{list?.list[31].main.temp_min|number:'1.0-0'}} &#8451;</td>
+          </tr>
+          <tr style="text-align: center"> 
+              <td>{{list?.list[39].dt_txt|date:'EEE, MMMM d'}}</td>
+                <td><img src="http://openweathermap.org/img/w/{{list?.list[39].weather[0].icon}}.png" class="image"></td>
+                <td>{{list?.list[39].main.temp_max|number:'1.0-0'}} &#8451; / {{list?.list[39].main.temp_min|number:'1.0-0'}} &#8451;</td>
+            </tr>
+            
+  </table>
+</div>
+</ion-content>
+</html>
+
+
+
